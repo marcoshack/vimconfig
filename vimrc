@@ -1,49 +1,30 @@
-
 " have syntax highlighting in terminals which can display colours:
 if has('syntax') && (&t_Co > 2)
   syntax on
+  colorscheme desert
 endif
 
-" have fifty lines of command-line (etc) history:
 set history=50
-
-" display the current mode and partially-typed commands in the status line:
 set showmode
 set showcmd
-
-" * Text Formatting -- General
-
-" don't make it look like there are line breaks where there aren't:
 set nowrap
-
-" use indents of 4 spaces, and have them copied down lines:
+set tabstop=4
 set shiftwidth=4
 set shiftround
 set expandtab
 set autoindent
-
 set textwidth=80
-
-
-" backspace
 set backspace=eol,start,indent
 
-" get rid of the default style of C comments, and define a style with two stars
-" at the start of `middle' rows which (looks nicer and) avoids asterisks used
-" for bullet lists being treated like C comments; then define a bullet list
-" style for single stars (like already is for hyphens):
+" C comments
 set comments-=s1:/*,mb:*,ex:*/
 set comments+=s:/*,mb:**,ex:*/
 set comments+=fb:*
 
-" treat lines starting with a quote mark as comments (for `Vim' files, such as
-" this very one!), and colons as well so that reformatting usenet messages from
-" `Tin' users works OK:
+" Vim comments
 set comments+=b:\"
 set comments+=n::
 
-
-" * Text Formatting -- Specific File Formats
 
 " enable filetype detection:
 filetype on
@@ -90,11 +71,7 @@ autocmd FileType make set noexpandtab shiftwidth=8
 " make searches case-insensitive, unless they contain upper-case letters:
 set ignorecase
 set smartcase
+set incsearch
 
-" show the `best match so far' as search strings are typed:
-" set incsearch
+set guifont=Monospace\ 10
 
-" assume the /g flag on :s substitutions to replace all matches in a line:
-"set gdefault
-
-set guifont=Monospace\ 9
