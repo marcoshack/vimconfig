@@ -7,7 +7,7 @@ endif
 set history=50
 set showmode
 set showcmd
-set nowrap
+"set nowrap
 set tabstop=4
 set shiftwidth=4
 set shiftround
