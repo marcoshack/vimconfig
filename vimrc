@@ -13,7 +13,7 @@ set shiftwidth=4
 set shiftround
 set expandtab
 set autoindent
-set textwidth=80
+set textwidth=0
 set backspace=eol,start,indent
 
 " C comments
@@ -72,6 +72,7 @@ autocmd FileType make set noexpandtab shiftwidth=8
 set ignorecase
 set smartcase
 set incsearch
+set hlsearch
 
 set guifont=Monospace\ 10
 
